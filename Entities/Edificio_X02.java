@@ -52,7 +52,7 @@ public abstract class Edificio_X02 {
 
     @Override
     public String toString() {
-        return "Edificio" + "alto:" + alto + " ancho:" + ancho + " largo:" + largo;
+        return "Edificio\n" + "- alto:" + alto + " ancho: " + ancho + " largo: " + largo;
     }
 
 }//The end

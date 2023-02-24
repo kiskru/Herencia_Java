@@ -40,13 +40,24 @@ public final class Polideportivo_X02 extends Edificio_X02{
     
 
     @Override
-    protected int calcularSuperficie() {
+    public int calcularSuperficie() {        
         return 2 * (alto*ancho+alto*largo+ancho*largo);
     }
 
     @Override
-    protected int calcularVolumen() {
+    public int calcularVolumen() {
         return alto*largo*ancho;
     }
 
+    @Override
+    public String toString() {
+        return "Polideportivo " + nombre + " tipo: " + tipo + "\n"+
+                "- alto:" + alto + " ancho: " + ancho + " largo: " + largo;
+    }
+
+    
+
+    
+    
+    
 }//The end
