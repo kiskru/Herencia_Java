@@ -4,10 +4,12 @@
  */
 package Entities;
 
+import java.util.Objects;
+
 /**
  * @author Kidver
  */
-public class Hotel4_X03 extends Alojamiento_X03 {
+public class Hotel4_X03 extends Alojamiento_X03 implements Comparable<Hotel4_X03> {
 
 //    • Hotel **** Cantidad de Habitaciones, Número de camas, Cantidad de Pisos, Gimnasio, 
 //    Nombre del Restaurante, Capacidad del Restaurante, Precio de las Habitaciones. 
@@ -18,13 +20,13 @@ public class Hotel4_X03 extends Alojamiento_X03 {
     protected Character GYM;
     protected String nomRestaurante;
     protected int capRestaurante;
-    protected double precioHab;
+    protected Double precioHab;
 
     public Hotel4_X03() {
     }
 
     public Hotel4_X03(int cantHabitaciones, int numCamas, int cantPisos, Character GYM, String nomRestaurante,
-            int capRestaurante, double precioHab, String nombre, String direccion, String encargado) {
+            int capRestaurante, String nombre, String direccion, String encargado) {
         super(nombre, direccion, encargado);
         this.cantHabitaciones = cantHabitaciones;
         this.numCamas = numCamas;
@@ -32,7 +34,7 @@ public class Hotel4_X03 extends Alojamiento_X03 {
         this.GYM = GYM;
         this.nomRestaurante = nomRestaurante;
         this.capRestaurante = capRestaurante;
-        this.precioHab = precioHab;
+        this.precioHab = this.calcPrecioHab();
     }
 
     public int getCantHabitaciones() {
@@ -83,11 +85,11 @@ public class Hotel4_X03 extends Alojamiento_X03 {
         this.capRestaurante = capRestaurante;
     }
 
-    public double getPrecioHab() {
+    public Double getPrecioHab() {
         return precioHab;
     }
 
-    public void setPrecioHab(double precioHab) {
+    public void setPrecioHab(Double precioHab) {
         this.precioHab = precioHab;
     }
 
@@ -105,7 +107,7 @@ public class Hotel4_X03 extends Alojamiento_X03 {
 //    Valor agregado por las limosinas: 
 //    • $15 por la cantidad de limosinas del hotel.
     
-    public void calcPrecioHab() {
+    protected Double calcPrecioHab() {
 
         double res;
         if (capRestaurante < 30) {
@@ -125,21 +127,87 @@ public class Hotel4_X03 extends Alojamiento_X03 {
                 gym = 30;
                 break;
             default:
-                System.out.println("La clasificacion del gimnacio es incorrecta");
-                gym = 20;
+                gym = 30;
                 break;
         }
 
         double precio = 50 + numCamas + res + gym;
-        precioHab = precio;
+        return precio;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 43 * hash + this.cantHabitaciones;
+        hash = 43 * hash + this.numCamas;
+        hash = 43 * hash + this.cantPisos;
+        hash = 43 * hash + Objects.hashCode(this.GYM);
+        hash = 43 * hash + Objects.hashCode(this.nomRestaurante);
+        hash = 43 * hash + this.capRestaurante;
+        hash = 43 * hash + (int) (Double.doubleToLongBits(this.precioHab) ^ (Double.doubleToLongBits(this.precioHab) >>> 32));
+        hash = 43 * hash + Objects.hashCode(this.nombre);
+        hash = 43 * hash + Objects.hashCode(this.direccion);
+        hash = 43 * hash + Objects.hashCode(this.encargado);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Hotel4_X03 other = (Hotel4_X03) obj;
+        if (this.cantHabitaciones != other.cantHabitaciones) {
+            return false;
+        }
+        if (this.numCamas != other.numCamas) {
+            return false;
+        }
+        if (this.cantPisos != other.cantPisos) {
+            return false;
+        }
+        if (this.capRestaurante != other.capRestaurante) {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.precioHab) != Double.doubleToLongBits(other.precioHab)) {
+            return false;
+        }
+        if (!Objects.equals(this.nomRestaurante, other.nomRestaurante)) {
+            return false;
+        }
+        if (!Objects.equals(this.nombre, other.nombre)) {
+            return false;
+        }
+        if (!Objects.equals(this.direccion, other.direccion)) {
+            return false;
+        }
+        if (!Objects.equals(this.GYM, other.GYM)){
+            return false;
+        }
+        return Objects.equals(this.encargado, other.encargado);
     }
 
     
+    
+    
+    
+    
     @Override
     public String toString() {
-        return "Hotel 4 estrellas\n" + nombre + " direccion: " + direccion + " Encargado: " + encargado + " cantidad de Habitaciones: " + cantHabitaciones
-                + " numero de Camas " + numCamas + " cantidad de Pisos " + cantPisos + " GYM " + GYM + " Restaurante: " + nomRestaurante
-                + " capacidad del Restaurante: " + capRestaurante + " precio de Habitacion: " + precioHab + "\n";
+        return "Hotel 4 estrellas\n" + nombre + "- direccion: " + direccion + ". Encargado: " + encargado + ". cantidad de Habitaciones: " + cantHabitaciones
+                + ".\n numero de Camas " + numCamas + ". cantidad de Pisos " + cantPisos + ". GYM " + GYM + ". Restaurante: " + nomRestaurante
+                + ".\n capacidad del Restaurante: " + capRestaurante + ". precio de Habitacion: " + precioHab + "\n";
+    }
+
+    @Override
+    public int compareTo(Hotel4_X03 t) {
+        return this.precioHab.compareTo(t.getPrecioHab());
     }
 
 }//The end

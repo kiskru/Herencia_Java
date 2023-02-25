@@ -4,9 +4,13 @@
  */
 package HerenciaMain;
 
+import Entities.Alojamiento_X03;
+import Entities.Hotel4_X03;
+import Entities.Hotel5_X03;
 import java.util.Scanner;
+import java.util.TreeSet;
 
-    /*
+/*
     Una compañía de promociones turísticas desea mantener información sobre la infraestructura 
     de alojamiento para turistas, de forma tal que los clientes puedan planear sus vacaciones de 
     acuerdo con sus posibilidades. Los alojamientos se identifican por un nombre, una dirección, 
@@ -53,14 +57,68 @@ import java.util.Scanner;
     • todos los campings con restaurante
     • todos las residencias que tienen descuento.
      * @author Kidver
-     */
+ */
 public class Alojamientos_EJX03 {
 
     public static Scanner scan = new Scanner(System.in).useDelimiter("\n");
 
     public static void main(String[] args) {
 
+        TreeSet<Alojamiento_X03> alojamientos = new TreeSet<>();
+        Alojamiento_X03 H4_01 = new Hotel4_X03(20, 30, 4, 'S', "las delicias", 
+                20,"El Hormiguero", "123 Malambo ", "Fernando");
+        alojamientos.add(H4_01);
+        Alojamiento_X03 H4_02 = new Hotel4_X03(20, 30, 4, 'A', "las delicias",
+                20,"El Hormiguero", "123 Malambo ", "Fernando");
+        alojamientos.add(H4_02);
+        Alojamiento_X03 H5_01 = new Hotel5_X03(2, 10, 25, 30, 40, 5, 
+                'A', "sabores", 60, 100, "Elixir", "AV magia", "merlin");
+        alojamientos.add(H5_01);
+
+        for (Alojamiento_X03 a : alojamientos) {
+            System.out.println(a);
+        }
+        
+        
+        boolean bool = true;
+        do {
+            System.out.println(""
+                    + "!Sistema de Alojamientos¡\n"
+                    + "\n"
+                    + "**Menu principal**\n"
+                    + "\n"
+                    + "1. • Ver todos los alojamientos.\n"
+                    + "2. • Ver los hoteles ordenados de más caro a más barato.\n"
+                    + "3. • Ver todos los campings con restaurante\n"
+                    + "4. • Ver todos las residencias que tienen descuento \n"
+                    + "5. • Salir\n");
+            
+            int aux = scan.nextInt();
+            
+            switch (aux) {
+                case 1:
+
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+
+                    break;
+                case 4:
+
+                    break;
+                case 5:
+                    bool = false;
+                    break;
+                default:
+                    System.out.println("Opcion incorrecta.\n"
+                            + "Elige nuevamente");
+            }
+
+        } while (bool);
         // TODO code application logic here
     }
 
 }//The end
+
