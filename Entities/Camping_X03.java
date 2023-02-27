@@ -4,15 +4,14 @@
  */
 package Entities;
 
-
 /**
- * Para los Camping se indica la capacidad máxima de carpas, la cantidad de baños 
-    disponibles y si posee o no un restaurante dentro de las instalaciones.
+ * Para los Camping se indica la capacidad máxima de carpas, la cantidad de
+ * baños disponibles y si posee o no un restaurante dentro de las instalaciones.
+ *
  * @author Kidver
  */
+public class Camping_X03 extends AlojamientoExtraHotel_X03 {
 
-public class Camping_X03 extends AlojamientoExtraHotel_X03{
-    
     protected int capCarpas;
     protected int canBaños;
     protected boolean restaurante;
@@ -53,12 +52,9 @@ public class Camping_X03 extends AlojamientoExtraHotel_X03{
 
     @Override
     public String toString() {
-        return "Camping\n" + nombre + " direccion: " + direccion + " encargado: " + encargado 
-                + " privado?  " + priv + " area: " + area
-                + " capacidad max de Carpas: " + capCarpas + " cantidad de Banios=" + canBaños + " hay restaurante " + restaurante;
+        return "Camping\n" + nombre + " direccion: " + direccion + " encargado: " + encargado
+                + "\n privado?  " + priv + " area: " + area
+                + " capacidad max de Carpas: " + capCarpas + " cantidad de Banios=" + canBaños + " hay restaurante " + restaurante + "\n";
     }
-    
-    
-    
 
 }//The end

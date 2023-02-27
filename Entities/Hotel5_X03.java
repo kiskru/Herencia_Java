@@ -20,7 +20,7 @@ package Entities;
  *
  * @author Kidver
  */
-public class Hotel5_X03 extends Hotel4_X03 {
+public final class Hotel5_X03 extends Hotel4_X03 {
 
     private int salonesConferencia;
     private int cantSuites;
@@ -66,7 +66,7 @@ public class Hotel5_X03 extends Hotel4_X03 {
     @Override
     public Double calcPrecioHab() {
         Double precio = super.calcPrecioHab();
-        precio += 15*cantLimosinas;
+        precio += 15 * cantLimosinas;
         return precio;
     }
 
@@ -100,15 +100,12 @@ public class Hotel5_X03 extends Hotel4_X03 {
         return this.cantLimosinas == other.cantLimosinas;
     }
 
-    
-    
     @Override
     public String toString() {
-        return "Hotel 5 Estrellas - " + nombre + "\n direccion: " + direccion + " Encargado: " + encargado + " cantidad de Habitaciones: " + cantHabitaciones  
-                + "\n numero de Camas " + numCamas + " cantidad de Pisos " + cantPisos + " GYM " + GYM + " Restaurante: " + nomRestaurante 
-                + "\n capacidad del Restaurante: " + capRestaurante  + " Cantidad de salones Conferencia: " + salonesConferencia + " cantidad de Suites: " + cantSuites 
-                + "\n cantidad de Limosinas=" + cantLimosinas + " precio de Habitacion: " + precioHab;
+        return "Hotel 5 Estrellas - " + nombre + "\n direccion: " + direccion + " Encargado: " + encargado + " cantidad de Habitaciones: " + cantHabitaciones
+                + "\n numero de Camas " + numCamas + " cantidad de Pisos " + cantPisos + " GYM " + GYM + " Restaurante: " + nomRestaurante
+                + "\n capacidad del Restaurante: " + capRestaurante + " Cantidad de salones Conferencia: " + salonesConferencia + " cantidad de Suites: " + cantSuites
+                + "\n cantidad de Limosinas=" + cantLimosinas + " precio de Habitacion: " + precioHab + "\n";
     }
 
-        
 }//The end

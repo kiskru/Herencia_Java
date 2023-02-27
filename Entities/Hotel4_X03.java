@@ -152,7 +152,7 @@ public class Hotel4_X03 extends Alojamiento_X03 implements Comparable<Hotel4_X03
     }
 
     @Override
-    public boolean equals(Object obj) {
+    public boolean equals  (Object obj) {
         if (this == obj) {
             return true;
         }
@@ -200,14 +200,14 @@ public class Hotel4_X03 extends Alojamiento_X03 implements Comparable<Hotel4_X03
     
     @Override
     public String toString() {
-        return "Hotel 4 estrellas\n" + nombre + "- direccion: " + direccion + ". Encargado: " + encargado + ". cantidad de Habitaciones: " + cantHabitaciones
+        return "Hotel 4 estrellas " + nombre + "\n- direccion: " + direccion + ". Encargado: " + encargado + ". cantidad de Habitaciones: " + cantHabitaciones
                 + ".\n numero de Camas " + numCamas + ". cantidad de Pisos " + cantPisos + ". GYM " + GYM + ". Restaurante: " + nomRestaurante
                 + ".\n capacidad del Restaurante: " + capRestaurante + ". precio de Habitacion: " + precioHab + "\n";
     }
 
     @Override
     public int compareTo(Hotel4_X03 t) {
-        return this.precioHab.compareTo(t.getPrecioHab());
+        return t.getPrecioHab().compareTo(this.precioHab);
     }
 
 }//The end

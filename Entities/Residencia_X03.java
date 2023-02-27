@@ -57,8 +57,8 @@ public class Residencia_X03 extends AlojamientoExtraHotel_X03{
     public String toString() {
         return "Residencia\n" + nombre + " direccion: " + direccion + " encargado: " + encargado 
                 + " privado?  " + priv + " area: " + area
-                + "cantidad de Habitaciones: " + cantHabitaciones + "tiene descuento: " + descuento 
-                + " tienecampo Deportivo: " + campoDeportivo
+                + "\ncantidad de Habitaciones: " + cantHabitaciones + "tiene descuento: " + descuento 
+                + " tienecampo Deportivo: " + campoDeportivo + "\n"
                 
                 ;
     }
