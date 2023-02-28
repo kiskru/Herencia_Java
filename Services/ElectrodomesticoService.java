@@ -28,7 +28,7 @@ public class ElectrodomesticoService {
         System.out.println("Elije el color deseado \n"
                 + "Colores Disponibles:");
         for (Color aux : Color.values()) {
-            System.out.print(aux.getColor() + "--");
+            System.out.print(aux.getColor()+ "--");
         }
         System.out.print("\n->");
 
@@ -63,7 +63,7 @@ public class ElectrodomesticoService {
                 electro.setPrecio(electro.getPrecio() + 1000);
                 break;
             case ('b'):
-            case 'B':
+            case ('B'):
                 electro.setPrecio(electro.getPrecio() + 800);
                 break;
             case ('c'):

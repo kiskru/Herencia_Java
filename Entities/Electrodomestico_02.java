@@ -61,7 +61,7 @@ public class Electrodomestico_02 {
 
     @Override
     public String toString() {
-        return "Electrodomestico\n" + "precio=" + precio + ", color=" + color + ", consumoEne=" + consumoEne + ", peso=" + peso;
+        return "Electrodomestico\n" + "precio=" + precio + ", color=" + color.getColor() + ", consumoEne=" + consumoEne + ", peso=" + peso;
     }
     
     

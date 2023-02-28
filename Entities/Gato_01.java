@@ -10,6 +10,7 @@ package Entities;
  */
 
 public class Gato_01 extends Animal_01{
+    
     private int vidas;
 
     public Gato_01(int vidas, String nombre, String alimento, Integer edad, String raza) {
