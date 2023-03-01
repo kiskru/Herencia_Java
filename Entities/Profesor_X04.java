@@ -22,8 +22,8 @@ public class Profesor_X04 extends Empleado_X04 {
     public Profesor_X04() {
     }
 
-    public Profesor_X04(Departamento dep, LocalDateTime fechaIncorp, int numDerpacho, String nombre, String apellido, int ID, EstadoCivil estadoCivil) {
-        super(fechaIncorp, numDerpacho, nombre, apellido, ID, estadoCivil);
+    public Profesor_X04(Departamento dep, LocalDateTime fechaIncorp, int numDerpacho, String nombre, String apellido, int ID) {
+        super(fechaIncorp, numDerpacho, nombre, apellido, ID);
         this.dep = dep;
     }
 
@@ -44,7 +44,7 @@ public class Profesor_X04 extends Empleado_X04 {
             System.out.println(i + 1 + ")" + departamentos[i] + "."); //imprimir valores enum para ver opciones
         }
 
-         while (!scan.hasNextInt()) {  // Mientras que no sea un entero
+        while (!scan.hasNextInt()) {  // Mientras que no sea un entero
             
             System.out.println("El valor ingresado no es un número. Inténtalo de nuevo.");
             scan.next();  // Limpia la entrada del usuario
@@ -57,4 +57,13 @@ public class Profesor_X04 extends Empleado_X04 {
        
     }
 
+    @Override
+    public String toString() {
+        return "Profesor \n" + "nombre=" + nombre + ", apellido=" + apellido + ", ID=" + ID + ", estadoCivil=" + estadoCivil+ ""
+                + "\nfechaIncorp=" + fechaIncorp + ", numDerpacho=" + numDerpacho+ "dep=" + dep + '}';
+    }
+
+    
+    
+    
 }//The end

@@ -16,7 +16,7 @@ incorporación a la facultad y qué número de despacho tienen asignado.
  * @author Kidver
  */
 
-public class Empleado_X04 extends Persona_X04{
+public abstract class Empleado_X04 extends Persona_X04{
     
     protected LocalDateTime fechaIncorp;
     protected int numDerpacho;
@@ -24,8 +24,8 @@ public class Empleado_X04 extends Persona_X04{
     public Empleado_X04() {
     }
 
-    public Empleado_X04(LocalDateTime fechaIncorp, int numDerpacho, String nombre, String apellido, int ID, EstadoCivil estadoCivil) {
-        super(nombre, apellido, ID, estadoCivil);
+    public Empleado_X04(LocalDateTime fechaIncorp, int numDerpacho, String nombre, String apellido, int ID) {
+        super(nombre, apellido, ID);
         this.fechaIncorp = fechaIncorp;
         this.numDerpacho = numDerpacho;
     }
@@ -59,6 +59,11 @@ public class Empleado_X04 extends Persona_X04{
         
         numDerpacho=numero;
         System.out.println("se ha asignado el despacho " + numDerpacho);
+    }
+
+    @Override
+    public String toString() {
+        return "Empleado "+ "nombre=" + nombre + ", apellido=" + apellido + ", ID=" + ID + ", estadoCivil=" + estadoCivil+ "fechaIncorp=" + fechaIncorp + ", numDerpacho=" + numDerpacho + '}';
     }
     
     

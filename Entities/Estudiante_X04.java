@@ -20,9 +20,8 @@ public class Estudiante_X04 extends Persona_X04 {
     public Estudiante_X04() {
     }
 
-    public Estudiante_X04(int curso, String nombre, String apellido, int ID, EstadoCivil estadoCivil) {
-        super(nombre, apellido, ID, estadoCivil);
-        this.curso = curso;
+    public Estudiante_X04(String nombre, String apellido, int ID) {
+        super(nombre, apellido, ID);
 
     }
 
@@ -44,7 +43,8 @@ public class Estudiante_X04 extends Persona_X04 {
 
     @Override
     public String toString() {
-        return "Estudiante_X04{" + "curso=" + curso + estadoCivil + '}';
+        return "Estudiante \n" + "nombre=" + nombre + ", apellido=" + apellido + ", ID=" + ID + ", estadoCivil=" + estadoCivil+ ""
+                + "\ncurso=" + curso + '\n';
     }
 
 }//The end

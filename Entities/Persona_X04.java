@@ -14,7 +14,7 @@ import static HerenciaMain.Facultad_ejX04.scan;
  *
  * @author Kidver
  */
-public class Persona_X04 {
+public abstract class Persona_X04 {
 
     protected String nombre;
     protected String apellido;
@@ -22,13 +22,13 @@ public class Persona_X04 {
     protected EstadoCivil estadoCivil;
 
     public Persona_X04() {
+      
     }
 
-    public Persona_X04(String nombre, String apellido, int ID, EstadoCivil estadoCivil) {
+    public Persona_X04(String nombre, String apellido, int ID) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.ID = ID;
-        this.estadoCivil = estadoCivil;
     }
 
     public String getNombre() {
@@ -63,9 +63,12 @@ public class Persona_X04 {
         this.estadoCivil = estadoCivil;
     }
 
+   
+    
     public void cambioEstadoCivil() {
         boolean flag = true;
         System.out.println("\nServicio de cambio de estado civil");
+       
         do {
             System.out.println("Ingrese el nuevo estado civil.");
             for (EstadoCivil est : EstadoCivil.values()) {
@@ -97,4 +100,7 @@ public class Persona_X04 {
         return "Persona_X04{" + "nombre=" + nombre + ", apellido=" + apellido + ", ID=" + ID + ", estadoCivil=" + estadoCivil + '}';
     }
 
+   
+             
+    
 }//The end

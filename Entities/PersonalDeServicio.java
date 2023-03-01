@@ -19,8 +19,8 @@ public class PersonalDeServicio extends Empleado_X04 {
     public PersonalDeServicio() {
     }
 
-    public PersonalDeServicio(Seccion seccion, LocalDateTime fechaIncorp, int numDerpacho, String nombre, String apellido, int ID, EstadoCivil estadoCivil) {
-        super(fechaIncorp, numDerpacho, nombre, apellido, ID, estadoCivil);
+    public PersonalDeServicio(Seccion seccion, LocalDateTime fechaIncorp, int numDerpacho, String nombre, String apellido, int ID) {
+        super(fechaIncorp, numDerpacho, nombre, apellido, ID);
         this.seccion = seccion;
     }
 
@@ -36,24 +36,25 @@ public class PersonalDeServicio extends Empleado_X04 {
         System.out.println("A que seccion vas a trasladar la persona?");
         System.out.println("seleccione una opcion numerica");
         int num = 1;
-
+       
         for (Seccion sec : Seccion.values()) { //recorre enum
             System.out.println(num + ")" + sec);
-            num+=1;
+            num += 1;
         }
-        int aux = scan.nextInt() - 1; 
+        int aux = scan.nextInt() - 1;
         for (Seccion sec : Seccion.values()) {
-            if (sec.ordinal()==aux) { //comparar la posicion del valor enum
-                seccion=sec; //asignar 
-                System.out.println("Se ha asignado la seccion "+sec);
-            }
+            if (sec.ordinal() == aux) { //comparar la posicion del valor enum
+                seccion = sec; //asignar 
+                System.out.println("Se ha asignado la seccion " + sec);
 
+            }
         }
     }
 
     @Override
     public String toString() {
-        return "PersonalServicio{" + "seccion=" + seccion + '}';
+        return "PersonalServicio\n" + "nombre=" + nombre + ", apellido=" + apellido + ", ID=" + ID + ", estadoCivil=" + estadoCivil+ ""
+                + "\nfechaIncorp=" + fechaIncorp + ", numDerpacho=" + numDerpacho+ "seccion=" + seccion + '}';
     }
 
 }//The end
