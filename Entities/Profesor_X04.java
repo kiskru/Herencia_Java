@@ -56,11 +56,12 @@ public class Profesor_X04 extends Empleado_X04 {
         System.out.println("Se ha cambiado el departamento a " + dep);
        
     }
+    
 
     @Override
     public String toString() {
         return "Profesor \n" + "nombre=" + nombre + ", apellido=" + apellido + ", ID=" + ID + ", estadoCivil=" + estadoCivil+ ""
-                + "\nfechaIncorp=" + fechaIncorp + ", numDerpacho=" + numDerpacho+ "dep=" + dep + '}';
+                + "\nfechaIncorp=" + fechaIncorp + ", numDerpacho=" + numDerpacho+ "dep=" + dep + '\n';
     }
 
     

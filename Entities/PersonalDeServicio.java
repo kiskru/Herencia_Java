@@ -54,7 +54,7 @@ public class PersonalDeServicio extends Empleado_X04 {
     @Override
     public String toString() {
         return "PersonalServicio\n" + "nombre=" + nombre + ", apellido=" + apellido + ", ID=" + ID + ", estadoCivil=" + estadoCivil+ ""
-                + "\nfechaIncorp=" + fechaIncorp + ", numDerpacho=" + numDerpacho+ "seccion=" + seccion + '}';
+                + "\nfechaIncorp=" + fechaIncorp + ", numDerpacho=" + numDerpacho+ "seccion=" + seccion + '\n';
     }
 
 }//The end

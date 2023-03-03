@@ -9,7 +9,6 @@ import Entities.Estudiante_X04;
 import Entities.Persona_X04;
 import Entities.PersonalDeServicio;
 import Entities.Profesor_X04;
-import Enums.Seccion;
 import Services.FacultadServicios;
 import java.util.Scanner;
 
@@ -23,15 +22,7 @@ public class Facultad_ejX04 {
     public static void main(String[] args) {
 
         FacultadServicios serv = new FacultadServicios();
-//        Estudiante_X04 est = new Estudiante_X04();
-//        Profesor_X04 pro = new Profesor_X04();
-//        PersonalDeServicio perSer = new PersonalDeServicio();
 
-//        est.cambioEstadoCivil();
-//        pro.reasignacionDespacho();
-//        est.matricularCurso();
-//        pro.cambioDepartamento();
-//        perSer.trasladoSeccion();
         boolean flag = true;
         do {
 

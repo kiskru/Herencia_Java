@@ -10,7 +10,6 @@ import Entities.PersonalDeServicio;
 import Entities.Profesor_X04;
 import Enums.Clases;
 import Enums.Departamento;
-import Enums.EstadoCivil;
 import Enums.Seccion;
 import static HerenciaMain.Facultad_ejX04.scan;
 import java.time.LocalDateTime;
@@ -27,12 +26,12 @@ public class FacultadServicios {
     public FacultadServicios() {
         listaPersonal = new ArrayList<Persona_X04>();
         crearPersona();
-
     }
 
     public void crearPersona() {
 
         for (int i = 0; i < 5; i++) {
+            
             Estudiante_X04 estudiante = new Estudiante_X04("fer " + i, "Chiqui " + i, 456 * i);
             Profesor_X04 profesor = new Profesor_X04(Departamento.values()[new Random().nextInt(Departamento.values().length)], LocalDateTime.now(), i, "Profesor " + i, "Profe " + 1, 123 * i);
             PersonalDeServicio perSer = new PersonalDeServicio(Seccion.values()[new Random().nextInt(Seccion.values().length)], LocalDateTime.now(), i, "Persona " + i, "Servicio " + i, 789 * i);

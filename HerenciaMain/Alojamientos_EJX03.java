@@ -170,15 +170,5 @@ public class Alojamientos_EJX03 {
 //        Collections.sort(alojamientos, new Comparators.ordenarPorNombre);
 
     }
-
-//    @Override
-//    public int comparePrice(Hotel4_X03 o1, Hotel4_X03 o2) {
-//       return 0;
-//    }
-//
-//    @Override
-//    public int compareHab(Hotel4_X03 o1, Hotel4_X03 o2) {
-//      return o1.getNombre().compareTo(o2.getNombre());
-//    }
 }//The end
 

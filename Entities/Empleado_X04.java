@@ -51,7 +51,8 @@ public abstract class Empleado_X04 extends Persona_X04{
         
         while (!scan.hasNextInt()) {  // Mientras que no sea un entero
             
-            System.out.println("El valor ingresado no es un número entero. Inténtalo de nuevo.");
+            System.out.println("El valor ingresado no es un número entero. "
+                    + "Inténtalo de nuevo.");
             scan.next();  // Limpia la entrada del usuario
         }
 

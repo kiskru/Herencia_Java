@@ -81,6 +81,8 @@ public abstract class Alojamiento_X03 {
         return Objects.equals(this.encargado, other.encargado);
     }
 
+    
+    
     @Override
     public String toString() {
         return "Alojamiento\n" + nombre + " direccion: " + direccion + " encargado: " + encargado;

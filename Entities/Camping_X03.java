@@ -13,16 +13,16 @@ package Entities;
 public class Camping_X03 extends AlojamientoExtraHotel_X03 {
 
     protected int capCarpas;
-    protected int canBaños;
+    protected int canBanios;
     protected boolean restaurante;
 
     public Camping_X03() {
     }
 
-    public Camping_X03(int capCarpas, int canBaños, boolean restaurante, boolean priv, double area, String nombre, String direccion, String encargado) {
+    public Camping_X03(int capCarpas, int canBanios, boolean restaurante, boolean priv, double area, String nombre, String direccion, String encargado) {
         super(priv, area, nombre, direccion, encargado);
         this.capCarpas = capCarpas;
-        this.canBaños = canBaños;
+        this.canBanios = canBanios;
         this.restaurante = restaurante;
     }
 
@@ -34,12 +34,12 @@ public class Camping_X03 extends AlojamientoExtraHotel_X03 {
         this.capCarpas = capCarpas;
     }
 
-    public int getCanBaños() {
-        return canBaños;
+    public int getCanBanios() {
+        return canBanios;
     }
 
-    public void setCanBaños(int canBaños) {
-        this.canBaños = canBaños;
+    public void setCanBanios(int canBanios) {
+        this.canBanios = canBanios;
     }
 
     public boolean isRestaurante() {
@@ -54,7 +54,7 @@ public class Camping_X03 extends AlojamientoExtraHotel_X03 {
     public String toString() {
         return "Camping\n" + nombre + " direccion: " + direccion + " encargado: " + encargado
                 + "\n privado?  " + priv + " area: " + area
-                + " capacidad max de Carpas: " + capCarpas + " cantidad de Banios=" + canBaños + " hay restaurante " + restaurante + "\n";
+                + " capacidad max de Carpas: " + capCarpas + " cantidad de Banios=" + canBanios + " hay restaurante " + restaurante + "\n";
     }
 
 }//The end
