@@ -17,10 +17,12 @@ public class Puerto_EJX01 {
 
     public static void main(String[] args) {
        
-        Puerto_X01 nuevoMundo = new Puerto_X01(10, "Nuevo Mundo");
-        System.out.println(
-                nuevoMundo.toString());
-
+        Puerto_X01 nuevoMundo = new Puerto_X01(7, "Nuevo Mundo");
+        
+//        nuevoMundo.mostrarBarcos();
+        nuevoMundo.calcularAlquiler();
+        
+        
         // TODO code application logic here
     }
 

@@ -6,13 +6,12 @@ package Entities;
 
 import java.time.LocalDate;
 
-
 /**
  * @author Kidver
  */
+public class BarcoMotor_X01 extends Barco_X01 {
 
-public class BarcoMotor_X01 extends Barco_X01{
-    private int Potencia;
+    protected int Potencia;
 
     public BarcoMotor_X01() {
     }
@@ -32,9 +31,7 @@ public class BarcoMotor_X01 extends Barco_X01{
 
     @Override
     public String toString() {
-        return "BarcoMotor " + "Potencia=" + Potencia + " matricula=" + matricula + ", eslora=" + eslora + ", anioFab=" + anioFab + '\n';
+        return "BarcoMotor " + " matricula=" + matricula + "Potencia=" + Potencia + ", eslora=" + eslora + ", anioFab=" + anioFab + '\n';
     }
-    
-    
 
 }//The end
